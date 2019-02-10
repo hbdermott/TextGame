@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Game</string>
+    <string name="value_edit_message">Enter a message</string>
+    <string name="value_button_send">Send</string>
+    <string name="value_button_start">Start</string>
+    <string name="blueMask_greeting">>>> It seems like another person is going to make an attempt. I wonder what this one is going to be like.</string>
+    <string name="mask_blue">Blue Mask</string>
+    <string name="mask_yellow">Yellow Mask</string>
+    <string name="mask_red">Red Mask</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/Black</item>
+        <item name="android:textColor">@color/GhostWhite</item>
+        <item name="colorPrimary">@color/DarkGray</item>
+        <item name="colorPrimaryDark">@color/DimGray</item>
+        <item name="colorAccent">@color/DarkGray</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>
