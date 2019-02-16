@@ -14,6 +14,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:noHistory">true</item>
         <item name="android:parentActivityName">.MainActivity</item>
+        <item name="android:visible">false</item>
     </style>
 
 </resources>
