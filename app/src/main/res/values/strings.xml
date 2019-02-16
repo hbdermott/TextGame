@@ -7,4 +7,24 @@
     <string name="mask_blue">Blue Mask</string>
     <string name="mask_yellow">Yellow Mask</string>
     <string name="mask_red">Red Mask</string>
+    <string name="start_text_0">… Hello? Is anyone on?</string>
+    <string name="start_option_0">(Keep Waiting)</string>
+    <string name="start_option_1">Yeah, I\'m here.</string>
+    <string name="choice_1_text_0">You! You’re not supposed to be here yet. Just… stay there. The others will be here soon.</string>
+    <string name="choice_1_text_1">…</string>
+    <string name="choice_1_text_2">Red? Yellow? Where are you??</string>
+    <string name="choice_1_text_3">Chill out, I’m on. I just finished my last character sheet.</string>
+    <string name="choice_1_text_4">He’s already here!</string>
+    <string name="choice_1_text_5">He? You mean she?</string>
+    <string name="choice_1_text_6">Uh, no. I’ve been telling you it’s a he.</string>
+    <string name="choice_1_text_7">That’s a straight-up lie! You’ve said she from the beginning!</string>
+    <string name="choice_1_text_8">We’re not arguing about this. Please? He’s here and we need to start. Yellow, are you here?</string>
+    <string name="choice_1_text_9">Yes.</string>
+    <string name="choice_1_text_10">I was also under the assumption that it was a he.</string>
+    <string name="choice_1_text_11">See?!</string>
+    <string name="choice_1_text_12">But Blue has been calling it a she.</string>
+    <string name="choice_text_13">:D</string>
+    <string name="choice_1_text_14">Look, let’s just ask. Are you a boy or a girl?</string>
+    <string name="choice_1_option_0">I\'m a girl</string>
+    <string name="choice_1_option_1">I\'m a boy</string>
 </resources>
