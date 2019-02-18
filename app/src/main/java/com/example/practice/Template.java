@@ -1,7 +1,6 @@
 package com.example.practice;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,58 +16,33 @@ public class Template extends AppCompatActivity {
     public final int bluemask = R.drawable.bluemask;
     public final int redmask = R.drawable.redmask;
     public final int yellowmask = R.drawable.yellowmask;
-    private Queue<TextView> text;
-    private Queue<ImageView> image;
     private Queue<Button> button;
     private Queue<Talk> allTalk;
     private Talk currentTalk;
-    private Talk curTalk1;
     private AnimationDrawable current;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
-    public class Talk
+    private class Talk
     {
-        Talk(){}
-        /*Talk(int textNum, int imageNum, int value)
+        private void appendImage(ImageView view)
         {
-            for (int i = 0; i < textNum; i++)
-            {
-                textView.add(text.remove());
-            }
-            for (int i = 0; i < imageNum; i++)
-            {
-                imageView.add(image.remove());
-            }
-            resource = value;
+            imageView = view;
         }
-        */
-        private void imageAppend()
+        private void appendText(TextView view)
         {
-            imageView.add(image.remove());
-        }
-        private void textAppend()
-        {
-            textView.add(text.remove());
+            textView.add(view);
         }
         private void appendResource(int resourceValue)
         {
             resource = resourceValue;
         }
+        private ImageView imageView = null;
         private Queue<TextView> textView = new LinkedList<>();
-        private Queue<ImageView> imageView = new LinkedList<>();
-        int resource;
+        private int resource;
     }
 
     public void findViews(ViewGroup v)
     {
         allTalk = new LinkedList<>();
-        text = new LinkedList<>();
-        image = new LinkedList<>();
         button = new LinkedList<>();
         int size = v.getChildCount();
         for (int i = 0; i < size; i++)
@@ -80,38 +54,37 @@ public class Template extends AppCompatActivity {
             }
             else if (object instanceof TextView)
             {
-                text.add((TextView)object);
+                if (currentTalk != null) {
+                    int color = ((TextView) object).getCurrentTextColor();
+                    if (color == getColor(R.color.blueMask))
+                        currentTalk.appendResource(bluemask);
+                    else if (color == getColor(R.color.redMask))
+                        currentTalk.appendResource(redmask);
+                    else if (color == getColor(R.color.yellowMask))
+                        currentTalk.appendResource(yellowmask);
+                    else {
+                        Talk a = new Talk();
+                        currentTalk = a;
+                        allTalk.add(a);
+                    }
+                }
+                else {
+                    Talk a = new Talk();
+                    currentTalk = a;
+                    allTalk.add(a);
+                }
+                currentTalk.appendText((TextView) object);
             }
             else if (object instanceof ImageView)
             {
-                image.add((ImageView)object);
-            }
-
-            if (!image.isEmpty())
-            {
                 Talk a = new Talk();
-                a.imageAppend();
-                curTalk1 = a;
+                a.appendImage((ImageView)object);
                 allTalk.add(a);
-            }
-            else if (!text.isEmpty())
-            {
-                if (text.element().getCurrentTextColor() == getColor(R.color.blueMask))
-                    curTalk1.appendResource(bluemask);
-                else if (text.element().getCurrentTextColor() == getColor(R.color.redMask))
-                    curTalk1.appendResource(redmask);
-                else if (text.element().getCurrentTextColor() == getColor(R.color.yellowMask))
-                    curTalk1.appendResource(yellowmask);
-                else {
-                    Talk a = new Talk();
-                    curTalk1 = a;
-                    allTalk.add(a);
-                }
-                curTalk1.textAppend();
+                currentTalk = a;
             }
         }
+        currentTalk = null;
     }
-
 
     public AnimationDrawable loadGif(int imageView, int resource)
     {
@@ -135,6 +108,7 @@ public class Template extends AppCompatActivity {
         View object = findViewById(view);
         object.setVisibility(View.VISIBLE);
     }
+
     public void visible (View v)
     {
         v.setVisibility(View.VISIBLE);
@@ -165,8 +139,8 @@ public class Template extends AppCompatActivity {
         if (current != null)
             current.stop();
         currentTalk = allTalk.remove();
-        if (!(currentTalk.imageView.isEmpty()))
-            current = loadGif(currentTalk.imageView.remove(), currentTalk.resource);
+        if (currentTalk.imageView != null)
+            current = loadGif(currentTalk.imageView, currentTalk.resource);
         if(!(currentTalk.textView.isEmpty()))
             visible(currentTalk.textView.remove());
     }
