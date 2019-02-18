@@ -17,12 +17,13 @@ public class Template extends AppCompatActivity {
     public final int bluemask = R.drawable.bluemask;
     public final int redmask = R.drawable.redmask;
     public final int yellowmask = R.drawable.yellowmask;
-    public Queue<TextView> text;
-    public Queue<ImageView> image;
-    public Queue<Button> button;
-    public Queue<Talk> allTalk;
-    public Talk currentTalk;
-    AnimationDrawable current;
+    private Queue<TextView> text;
+    private Queue<ImageView> image;
+    private Queue<Button> button;
+    private Queue<Talk> allTalk;
+    private Talk currentTalk;
+    private Talk curTalk1;
+    private AnimationDrawable current;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,8 @@ public class Template extends AppCompatActivity {
 
     public class Talk
     {
-        Talk(int textNum, int imageNum, int value)
+        Talk(){}
+        /*Talk(int textNum, int imageNum, int value)
         {
             for (int i = 0; i < textNum; i++)
             {
@@ -44,13 +46,27 @@ public class Template extends AppCompatActivity {
             }
             resource = value;
         }
-        Queue<TextView> textView = new LinkedList<>();
-        Queue<ImageView> imageView = new LinkedList<>();
+        */
+        private void imageAppend()
+        {
+            imageView.add(image.remove());
+        }
+        private void textAppend()
+        {
+            textView.add(text.remove());
+        }
+        private void appendResource(int resourceValue)
+        {
+            resource = resourceValue;
+        }
+        private Queue<TextView> textView = new LinkedList<>();
+        private Queue<ImageView> imageView = new LinkedList<>();
         int resource;
     }
 
     public void findViews(ViewGroup v)
     {
+        allTalk = new LinkedList<>();
         text = new LinkedList<>();
         image = new LinkedList<>();
         button = new LinkedList<>();
@@ -58,17 +74,40 @@ public class Template extends AppCompatActivity {
         for (int i = 0; i < size; i++)
         {
             View object = v.getChildAt(i);
-            if (object instanceof TextView)
-            {
-                text.add((TextView)object);
-            }
-            if (object instanceof ImageView)
-            {
-                image.add((ImageView)object);
-            }
             if (object instanceof Button)
             {
                 button.add((Button)object);
+            }
+            else if (object instanceof TextView)
+            {
+                text.add((TextView)object);
+            }
+            else if (object instanceof ImageView)
+            {
+                image.add((ImageView)object);
+            }
+
+            if (!image.isEmpty())
+            {
+                Talk a = new Talk();
+                a.imageAppend();
+                curTalk1 = a;
+                allTalk.add(a);
+            }
+            else if (!text.isEmpty())
+            {
+                if (text.element().getCurrentTextColor() == getColor(R.color.blueMask))
+                    curTalk1.appendResource(bluemask);
+                else if (text.element().getCurrentTextColor() == getColor(R.color.redMask))
+                    curTalk1.appendResource(redmask);
+                else if (text.element().getCurrentTextColor() == getColor(R.color.yellowMask))
+                    curTalk1.appendResource(yellowmask);
+                else {
+                    Talk a = new Talk();
+                    curTalk1 = a;
+                    allTalk.add(a);
+                }
+                curTalk1.textAppend();
             }
         }
     }
@@ -101,7 +140,7 @@ public class Template extends AppCompatActivity {
         v.setVisibility(View.VISIBLE);
     }
 
-    protected void tapHelper(Queue<Talk> array)
+    protected void tapHelper()
     {
         if (currentTalk != null)
         {
@@ -111,7 +150,7 @@ public class Template extends AppCompatActivity {
                 return;
             }
         }
-        if (array.isEmpty() && !(button.isEmpty()))
+        if (allTalk.isEmpty() && !(button.isEmpty()))
         {
             int size = button.size();
             for (int i = 0; i < size; i++)
@@ -121,11 +160,11 @@ public class Template extends AppCompatActivity {
             current.stop();
             return;
         }
-        if (array.isEmpty())
+        if (allTalk.isEmpty())
             return;
         if (current != null)
             current.stop();
-        currentTalk = array.remove();
+        currentTalk = allTalk.remove();
         if (!(currentTalk.imageView.isEmpty()))
             current = loadGif(currentTalk.imageView.remove(), currentTalk.resource);
         if(!(currentTalk.textView.isEmpty()))
