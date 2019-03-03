@@ -31,7 +31,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -125,7 +125,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -150,7 +150,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -175,7 +175,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -200,7 +200,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -249,7 +249,7 @@
                 android:layout_width="@dimen/mask_value"
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
@@ -274,7 +274,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
@@ -298,7 +298,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -323,7 +323,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
@@ -346,7 +346,7 @@
                 android:layout_width="@dimen/mask_value"
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
@@ -423,6 +423,7 @@
                 android:text="@string/hiYellow"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blueMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/imageView14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView13" />
@@ -445,6 +446,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/myUnderstanding"
                 android:textColor="@color/yellowMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView15"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -468,6 +470,7 @@
                 android:text="@string/choice_1_text_11"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blueMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/imageView16"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView15" />
@@ -490,6 +493,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/SHEE"
                 android:textColor="@color/yellowMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView17"
                 app:layout_constraintTop_toBottomOf="@+id/imageView16" />
@@ -512,6 +516,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/ha"
                 android:textColor="@color/redMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/imageView18"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView17" />
@@ -534,6 +539,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/personally"
                 android:textColor="@color/yellowMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView19"
                 app:layout_constraintTop_toBottomOf="@+id/imageView18" />
@@ -557,6 +563,7 @@
                 android:text="@string/goodwith"
                 android:textAlignment="textEnd"
                 android:textColor="@color/blueMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/imageView20"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView19" />
@@ -579,6 +586,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/frontof"
                 android:textColor="@color/yellowMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView21"
                 app:layout_constraintTop_toBottomOf="@+id/textView24" />
@@ -601,6 +609,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/waht"
                 android:textColor="@color/blueMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/imageView22"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -623,6 +632,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="@string/yeet"
                 android:textColor="@color/yellowMask"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView23"
                 app:layout_constraintTop_toBottomOf="@+id/imageView22" />
@@ -634,7 +644,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:onClick="girlorBoy"
                 android:text="@string/choice_1_option_0"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
@@ -646,7 +658,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
+                android:onClick="girlorBoy"
                 android:text="@string/choice_1_option_1"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -15,7 +15,7 @@
         <item name="android:noHistory">true</item>
         <item name="android:parentActivityName">.MainActivity</item>
         <item name="android:visible">false</item>
-        <item name="android:fontFamily">@font/adamina</item>
+        <item name="android:fontFamily">@font/varela</item>
     </style>
 
 </resources>
