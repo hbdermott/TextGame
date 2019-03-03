@@ -1,5 +1,6 @@
 package com.example.practice;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,11 +18,11 @@ public class Template extends AppCompatActivity {
     public final int redmask = R.drawable.redmask;
     public final int yellowmask = R.drawable.yellowmask;
     private Queue<Button> button;
-    private Queue<Talk> allTalk;
-    private Talk currentTalk;
+    private Queue<Tap> allTap;
+    private Tap currentTap;
     private AnimationDrawable current;
 
-    private class Talk
+    private class Tap
     {
         private void appendImage(ImageView view)
         {
@@ -42,7 +43,7 @@ public class Template extends AppCompatActivity {
 
     public void findViews(ViewGroup v)
     {
-        allTalk = new LinkedList<>();
+        allTap = new LinkedList<>();
         button = new LinkedList<>();
         int size = v.getChildCount();
         for (int i = 0; i < size; i++)
@@ -54,36 +55,36 @@ public class Template extends AppCompatActivity {
             }
             else if (object instanceof TextView)
             {
-                if (currentTalk != null) {
+                if (currentTap != null) {
                     int color = ((TextView) object).getCurrentTextColor();
                     if (color == getColor(R.color.blueMask))
-                        currentTalk.appendResource(bluemask);
+                        currentTap.appendResource(bluemask);
                     else if (color == getColor(R.color.redMask))
-                        currentTalk.appendResource(redmask);
+                        currentTap.appendResource(redmask);
                     else if (color == getColor(R.color.yellowMask))
-                        currentTalk.appendResource(yellowmask);
+                        currentTap.appendResource(yellowmask);
                     else {
-                        Talk a = new Talk();
-                        currentTalk = a;
-                        allTalk.add(a);
+                        Tap a = new Tap();
+                        currentTap = a;
+                        allTap.add(a);
                     }
                 }
                 else {
-                    Talk a = new Talk();
-                    currentTalk = a;
-                    allTalk.add(a);
+                    Tap a = new Tap();
+                    currentTap = a;
+                    allTap.add(a);
                 }
-                currentTalk.appendText((TextView) object);
+                currentTap.appendText((TextView) object);
             }
             else if (object instanceof ImageView)
             {
-                Talk a = new Talk();
+                Tap a = new Tap();
                 a.appendImage((ImageView)object);
-                allTalk.add(a);
-                currentTalk = a;
+                allTap.add(a);
+                currentTap = a;
             }
         }
-        currentTalk = null;
+        currentTap = null;
     }
 
     public AnimationDrawable loadGif(int imageView, int resource)
@@ -116,15 +117,15 @@ public class Template extends AppCompatActivity {
 
     protected void tapHelper()
     {
-        if (currentTalk != null)
+        if (currentTap != null)
         {
-            if (!(currentTalk.textView.isEmpty()))
+            if (!(currentTap.textView.isEmpty()))
             {
-                visible(currentTalk.textView.remove());
+                visible(currentTap.textView.remove());
                 return;
             }
         }
-        if (allTalk.isEmpty() && !(button.isEmpty()))
+        if (allTap.isEmpty() && !(button.isEmpty()))
         {
             int size = button.size();
             for (int i = 0; i < size; i++)
@@ -134,15 +135,23 @@ public class Template extends AppCompatActivity {
             current.stop();
             return;
         }
-        if (allTalk.isEmpty())
+        if (allTap.isEmpty())
             return;
         if (current != null)
             current.stop();
-        currentTalk = allTalk.remove();
-        if (currentTalk.imageView != null)
-            current = loadGif(currentTalk.imageView, currentTalk.resource);
-        if(!(currentTalk.textView.isEmpty()))
-            visible(currentTalk.textView.remove());
+        currentTap = allTap.remove();
+        if (currentTap.imageView != null)
+            current = loadGif(currentTap.imageView, currentTap.resource);
+        if(!(currentTap.textView.isEmpty()))
+            visible(currentTap.textView.remove());
     }
-
+    public void screenTapped(View view)
+    {
+        tapHelper();
+    }
+    public void onPause()
+    {
+        super.onPause();
+        MainActivity.getInstance().current = new Intent(this, getClass());
+    }
 }

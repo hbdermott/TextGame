@@ -1,12 +1,6 @@
 <resources>
     <string name="app_name">Empath</string>
-    <string name="value_edit_message">Enter a message</string>
-    <string name="value_button_send">Send</string>
     <string name="value_button_start">Start</string>
-    <string name="blueMask_greeting">>>> It seems like another person is going to make an attempt. I wonder what this one is going to be like.</string>
-    <string name="mask_blue">Blue Mask</string>
-    <string name="mask_yellow">Yellow Mask</string>
-    <string name="mask_red">Red Mask</string>
     <string name="start_text_0">… Hello? Is anyone on?</string>
     <string name="start_option_0">(Keep Waiting)</string>
     <string name="start_option_1">Yeah, I\'m here.</string>
@@ -27,4 +21,30 @@
     <string name="choice_1_text_14">Look, let’s just ask. Are you a boy or a girl?</string>
     <string name="choice_1_option_0">I\'m a girl</string>
     <string name="choice_1_option_1">I\'m a boy</string>
+    <string name="choice_0_text_0">I love how you guys never take anything seriously. Makes it super fun whenever I plan things like this.</string>
+    <string name="choice_0_text_1">Suuuuper fun.</string>
+    <string name="choice_0_text_2">Maybe if I specifically tell you to be here at a certain time, then you should be here.</string>
+    <string name="choice_0_text_3">I’m here, geez. I was finishing my last character sheet.</string>
+    <string name="choice_0_text_4">Also, when have I ever not been serious? I’m Mr. Serious. No smile here. Nada.</string>
+    <string name="choice_0_text_5">Whatever, yeah. I just want to go over the plan before he gets here.</string>
+    <string name="choice_0_text_6">Wait, he? You definitely said it was going to be a she.</string>
+    <string name="choice_0_text_7">Uh, no. He.</string>
+    <string name="choice_0_text_8">You’ve been calling her a she this whole time! As in “She won’t know what hit her” and “She’ll be crying herself to sleep after this.” Sound familiar?</string>
+    <string name="choice_0_text_9">Okay, it’s possible that those things were said by me. It doesn’t matter.</string>
+    <string name="choice_0_text_10">I’ve been picturing a she this whole time :( You’re messing with my vibe.</string>
+    <string name="choice_0_text_11">Red, c’mon dude. I need to make sure we’re on the same page with this thing. The plan, not the gender.</string>
+    <string name="choice_0_text_12">What about Yellow? We need to wait for her to get on before we start, right?</string>
+    <string name="choice_0_text_13">She knows what to do. And she’ll be here.</string>
+    <string name="choice_0_text_14">So that whole rant earlier was just directed towards me?</string>
+    <string name="choice_0_text_15">Hi, you two.</string>
+    <string name="test">Hello</string>
+    <string name="hiYellow">Hi, Yellow. For the record, isn’t our guest going to be a he?</string>
+    <string name="myUnderstanding">That was my understanding.</string>
+    <string name="SHEE">But you have been calling it a she. It’s unclear.</string>
+    <string name="ha">HA! I think it’s a she. I’m almost certain.</string>
+    <string name="personally">Personally, I imagined it as a he.</string>
+    <string name="goodwith">Yeah, yeah, enough about the gender thing. Let’s talk shop. Yellow, are you still good with the Mystic Route?</string>
+    <string name="frontof">Blue, should we really be talking about this in front of him?</string>
+    <string name="waht">WHAT?</string>
+    <string name="yeet">Yes, he’s been here for a minute or so. Sorry, are you a girl or a boy?</string>
 </resources>
