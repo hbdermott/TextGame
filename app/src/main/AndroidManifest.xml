@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".choice_0"></activity>
+        <activity android:name=".Yespersonality"></activity>
+        <activity android:name=".Nopersonality" />
+        <activity android:name=".boyvsgirl" />
+        <activity android:name=".choice_0" />
         <activity
             android:name=".choice_1"
             android:noHistory="true"
