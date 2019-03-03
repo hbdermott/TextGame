@@ -226,7 +226,7 @@
                 android:layout_height="@dimen/mask_value"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
