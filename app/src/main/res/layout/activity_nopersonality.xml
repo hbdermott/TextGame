@@ -4,15 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:clipToPadding="true"
     tools:context=".Nopersonality">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layoutView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="screenTapped"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -20,6 +16,7 @@
             android:layout_height="@dimen/mask_value"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -119,6 +116,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button6" />
 
-    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

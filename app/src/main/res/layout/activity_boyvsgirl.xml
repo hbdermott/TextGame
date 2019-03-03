@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".boyvsgirl">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layoutView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="screenTapped"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
 
         <ImageView
             android:id="@+id/imageView"
@@ -172,6 +165,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button7" />
 
-    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
