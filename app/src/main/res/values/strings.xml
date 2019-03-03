@@ -27,4 +27,19 @@
     <string name="choice_1_text_14">Look, let’s just ask. Are you a boy or a girl?</string>
     <string name="choice_1_option_0">I\'m a girl</string>
     <string name="choice_1_option_1">I\'m a boy</string>
+    <string name="boy">Boy</string>
+    <string name="Girl">Girl.</string>
+    <string name="Boy">Boy.</string>
+    <string name="agree">Let\'s agree to disagree. The game begins... NOW.</string>
+    <string name="personality">Have you ever taken a personality test?</string>
+    <string name="lying">Good, you\'re already lying. That\'s an important part of these tests. Just... keep responding naturally.</string>
+    <string name="Staycalm">Stay calm.</string>
+    <string name="QuestionOne">You cut through the grassy field on your way to class. You\'re in a hurry, so when you spot a flash of white paper amidst the green, you\'ve already taken several steps. Come to think of it, you\'re not sure you saw anything at all.</string>
+    <string name="Do">Do you go back and look?</string>
+    <string name="Yes">Yes.</string>
+    <string name="No">No.</string>
+    <string name="Igoback">I go back and look.</string>
+    <string name="walking">I continue walking to class.</string>
+    <string name="Format">Then you\'re familiar with the format. We\'ll ask you a series of questions. Your answers, your lies, and your false impressions of yourself… they will determine your fate here.</string>
+    <string name="different">It\'s a little different than some personality tests.</string>
 </resources>
