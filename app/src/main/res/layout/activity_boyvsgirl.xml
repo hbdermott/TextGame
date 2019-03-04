@@ -2,9 +2,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".boyvsgirl">
+    tools:context=".boyvsgirl"
+    android:onClick="screenTapped">
 
 
         <ImageView
@@ -159,6 +161,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:onClick="no"
             android:text="@string/No"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"

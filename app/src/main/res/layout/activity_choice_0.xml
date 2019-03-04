@@ -620,7 +620,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView22"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textView27"
