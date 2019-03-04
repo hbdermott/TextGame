@@ -61,4 +61,10 @@
     <string name="walking">I continue walking to class.</string>
     <string name="Format">Then you\'re familiar with the format. We\'ll ask you a series of questions. Your answers, your lies, and your false impressions of yourself… they will determine your fate here.</string>
     <string name="different">It\'s a little different than some personality tests.</string>
+    <string name="interesting">Interesting.</string>
+    <string name="Toldyou">Told you so.</string>
+    <string name="QuestionTwo">You’re on a camping trip with your family, and after a long day of setting up camp, you climb into the tent to sleep. Unfortunately, the unfamiliar buzz of the crickets outside keeps you from falling asleep. Just as you finally begin to doze off, your younger brother shakes you awake and says he needs to go to the bathroom. It’s only a few feet away, you tell him, but he insists. There are monsters outside, he says.</string>
+    <string name="Doyougo">Do you go with him?</string>
+    <string name="Itellhim">I tell him to go without me.</string>
+    <string name="Igetup">I get up and go with him.</string>
 </resources>
