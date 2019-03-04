@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Question2"></activity>
+        <activity android:name=".Question3"></activity>
+        <activity android:name=".Question2" />
         <activity
             android:name=".Yespersonality"
             android:noHistory="true"

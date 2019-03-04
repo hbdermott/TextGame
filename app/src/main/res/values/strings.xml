@@ -67,4 +67,10 @@
     <string name="Doyougo">Do you go with him?</string>
     <string name="Itellhim">I tell him to go without me.</string>
     <string name="Igetup">I get up and go with him.</string>
+    <string name="reminder">Right, right.</string>
+    <string name="Easy">It\'s easy to just click a button, huh?</string>
+    <string name="Question3">It’s the final game of your high school tennis season and your doubles partner is playing like garbage. You’re trying your best to be patient, but her constant mistakes are getting to you. With the game on the line, you step back to serve and… you double fault. It’s over. You’ve lost. Your partner turns and gives you the evil eye.</string>
+    <string name="Whatdo">What do you say to her?</string>
+    <string name="youknow">\"You know you lost us the game, right?\"</string>
+    <string name="sorry">\"Sorry. I choked.\"</string>
 </resources>
