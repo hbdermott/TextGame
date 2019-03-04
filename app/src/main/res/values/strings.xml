@@ -73,4 +73,14 @@
     <string name="Whatdo">What do you say to her?</string>
     <string name="youknow">\"You know you lost us the game, right?\"</string>
     <string name="sorry">\"Sorry. I choked.\"</string>
+    <string name="cats">You’re sitting on your porch and drinking lemonade. You watch Ninja, your cat, roll around in the dirt like an adorable fool. Suddenly, the neighbor’s kid sprints up, punts Ninja into the bushes, and runs away, cackling.</string>
+    <string name="Doyou">Do you run after the kid and punch him?</string>
+    <string name="Irun">I run the kid down and punch him.</string>
+    <string name="idont">I don\'t run the kid down.</string>
+    <string name="whattheheck">(What the heck, Blue. That scenario was super lame!)</string>
+    <string name="actionpacked">(It was emotional and action-packed, was it not?)</string>
+    <string name="cliffs">For weeks you’ve been waiting for a rainy day. This is the last day before summer vacation ends, and it’s sunny outside, once again. It’s the worst. All you want is an epic, stormy, solo day at the beach--the sort of day where you can stand heroically on a cliff as the wind and waves pound at the rocks below. Then again, maybe you shouldn’t be so picky with your weather.</string>
+    <string name="doyouvisit">Do you go visit a seaside cliff despite the lack of rain?</string>
+    <string name="igoanyways">I go anyways.</string>
+    <string name="home">I stay home.</string>
 </resources>
