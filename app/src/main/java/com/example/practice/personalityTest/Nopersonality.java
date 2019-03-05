@@ -1,8 +1,11 @@
-package com.example.practice;
+package com.example.practice.personalityTest;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.practice.R;
+import com.example.practice.Template;
 
 public class Nopersonality extends Template {
 
@@ -16,5 +19,13 @@ public class Nopersonality extends Template {
     public void screenTapped(View view)
     {
         tapHelper();
+    }
+    public void goBack(View view)
+    {
+        startActivity(Question2.class);
+    }
+    public void contWalk(View view)
+    {
+        startActivity(Question2.class);
     }
 }

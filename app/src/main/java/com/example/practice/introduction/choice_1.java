@@ -1,18 +1,18 @@
-package com.example.practice;
+package com.example.practice.introduction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.practice.R;
 
-
-public class choice_0 extends Template {
+public class choice_1 extends com.example.practice.Template {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choice_0);
+        setContentView(R.layout.activity_choice_1);
         findViews((ViewGroup) findViewById(R.id.layoutView));
         tapHelper();
     }

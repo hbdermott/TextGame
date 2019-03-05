@@ -1,32 +1,33 @@
-package com.example.practice;
+package com.example.practice.introduction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class boyvsgirl extends Template {
+import com.example.practice.R;
+import com.example.practice.Template;
+
+public class start extends Template {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boyvsgirl);
+        setContentView(R.layout.activity_start);
         findViews((ViewGroup) findViewById(R.id.layoutView));
         tapHelper();
-    }
-    public void screenTapped(View view)
-    {
         tapHelper();
     }
 
-    public void yes(View view)
+    public void option_0(View view)
     {
-        Intent intent = new Intent(this, Yespersonality.class);
+        Intent intent = new Intent(start.this, choice_0.class);
         startActivity(intent);
     }
-    public void no(View view)
+    public void option_1(View view)
     {
-        Intent intent = new Intent(this, Nopersonality.class);
+        Intent intent = new Intent(start.this, choice_1.class);
         startActivity(intent);
     }
+
 }

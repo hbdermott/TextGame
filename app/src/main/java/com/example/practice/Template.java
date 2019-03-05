@@ -57,11 +57,11 @@ public class Template extends AppCompatActivity {
             {
                 if (currentTap != null) {
                     int color = ((TextView) object).getCurrentTextColor();
-                    if (color == getColor(R.color.blueMask))
+                    if (color == getResources().getColor(R.color.blueMask))
                         currentTap.appendResource(bluemask);
-                    else if (color == getColor(R.color.redMask))
+                    else if (color == getResources().getColor(R.color.redMask))
                         currentTap.appendResource(redmask);
-                    else if (color == getColor(R.color.yellowMask))
+                    else if (color == getResources().getColor(R.color.yellowMask))
                         currentTap.appendResource(yellowmask);
                     else {
                         Tap a = new Tap();
@@ -132,7 +132,8 @@ public class Template extends AppCompatActivity {
             {
                 visible(button.remove());
             }
-            current.stop();
+            if(current != null)
+                current.stop();
             return;
         }
         if (allTap.isEmpty())
@@ -154,4 +155,10 @@ public class Template extends AppCompatActivity {
         super.onPause();
         MainActivity.getInstance().current = new Intent(this, getClass());
     }
+    public void startActivity(Class next)
+    {
+        Intent intent = new Intent(this, next);
+        startActivity(intent);
+    }
+
 }

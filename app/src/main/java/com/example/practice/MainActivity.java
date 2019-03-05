@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.practice.introduction.start;
+
 
 public class MainActivity extends AppCompatActivity {
     Intent current = null;
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         instance = this;
     }
-    protected void start(View view)
+    public void start(View view)
     {
         if (current == null) {
             current = new Intent(this, start.class);

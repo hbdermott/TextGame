@@ -1,16 +1,18 @@
-package com.example.practice;
+package com.example.practice.personalityTest;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class choice_1 extends com.example.practice.Template {
+import com.example.practice.R;
+import com.example.practice.Template;
+
+public class Question3 extends Template {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choice_1);
+        setContentView(R.layout.activity_question3);
         findViews((ViewGroup) findViewById(R.id.layoutView));
         tapHelper();
     }
@@ -19,9 +21,12 @@ public class choice_1 extends com.example.practice.Template {
         tapHelper();
     }
 
-    public void girlorBoy(View view)
+    public void sorry(View view)
     {
-        Intent intent = new Intent(this, boyvsgirl.class );
-        startActivity(intent);
+        startActivity(Question4.class);
+    }
+    public void yourFault(View view)
+    {
+        startActivity(Question4.class);
     }
 }

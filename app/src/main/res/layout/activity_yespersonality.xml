@@ -10,7 +10,7 @@
     android:layout_marginEnd="8dp"
     android:clipToPadding="true"
     android:onClick="screenTapped"
-    tools:context=".Yespersonality">
+    tools:context=".personalityTest.Yespersonality">
 
 
     <ImageView
@@ -101,6 +101,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/Igoback"
         android:visibility="invisible"
+        android:onClick="goBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -113,6 +114,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/walking"
+        android:onClick="contWalk"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
